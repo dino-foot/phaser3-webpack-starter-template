@@ -4,7 +4,7 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
-  entry: "/app.js",
+  entry: "/src/index.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "public/dist"),
@@ -19,10 +19,6 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
-      // {
-      //   test: /\.(png|jpg|gif)$/i,
-      //   use: ["url-loader"],
-      // },
       {
         test: [/\.vert$/, /\.frag$/],
         use: "raw-loader",
@@ -34,6 +30,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      CANVAS_RENDERER: JSON.stringify(true),
+      WEBGL_RENDERER: JSON.stringify(true),
+    }),
     new HtmlWebpackPlugin({
       template: "/public/index.html",
     }),
