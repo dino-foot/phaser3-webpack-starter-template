@@ -1,5 +1,5 @@
 - Author : Shohanur Rahaman
-- Phaser Version: 3.55.X
+- Phaser Version: 3.55.2
 - Copyright reserved &copy;
 
 - npm install / yarn install
