@@ -1,4 +1,4 @@
-//import logoUrl from "../public/sprites/phaser-logo.png";
+import logoUrl from "../public/sprites/phaser-logo.png";
 
 export default class Game extends Phaser.Scene {
   constructor() {
@@ -10,7 +10,7 @@ export default class Game extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("logo", "sprites/phaser-logo.png");
+    this.load.image("logo", logoUrl);
   }
 
   create() {

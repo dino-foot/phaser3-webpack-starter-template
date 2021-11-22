@@ -15,8 +15,9 @@
     "strictPropertyInitialization": false,
 
     "moduleResolution": "node",
-    "lib": ["dom", "esnext"]
+    "lib": ["dom", "esnext"],
+    "typeRoots": ["node_modules/@types", "node_module/phaser/types", "types"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "types/global.d.ts"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
