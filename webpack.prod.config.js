@@ -6,10 +6,10 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "production",
-  entry: "/src/index.js",
+  entry: "public/src/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "public/dist"),
+    path: path.resolve(__dirname, "dist"),
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
@@ -72,7 +72,7 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true),
     }),
     new HtmlWebpackPlugin({
-      template: "/public/index.html",
+      template: "/index.html",
     }),
   ],
 };
